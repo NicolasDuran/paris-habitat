@@ -8,6 +8,8 @@ import "quasar-framework/dist/quasar.ie.polyfills";
 import "quasar-extras/animate";
 import "quasar-extras/roboto-font";
 import "quasar-extras/material-icons";
+
+import "quasar-extras/ionicons";
 import Quasar, * as All from "quasar";
 
 Vue.use(Quasar, {
