@@ -44,7 +44,10 @@
                         <q-item-side icon="info_outline" />
                         <q-item-main label="Quiz" />
                     </q-item>
-
+                    <q-item to="/data">
+                        <q-item-side icon="info_outline" />
+                        <q-item-main label="Mes Data" />
+                    </q-item>
                     <q-item-separator />
                     <q-list-header>Essential Links</q-list-header>
                     <q-item @click.native="openURL('http://quasar-framework.org')">

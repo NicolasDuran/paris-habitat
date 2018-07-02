@@ -4,6 +4,7 @@ import DefaultLayout from "./layouts/Default.vue";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Quiz from "./views/Quiz.vue";
+import Data from "./views/Data.vue";
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
           path: "/quiz",
           name: "quiz",
           component: Quiz
+        },
+        {
+          path: "/data",
+          name: "data",
+          component: Data
         }
       ]
     }
