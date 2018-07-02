@@ -3,16 +3,16 @@
 <template>
     <div>
         <span class="answertxt">
-            <i class="cui-circle-x icons font-3xl mt-4 badanswer"></i>
-            Raté !
+            <i class="cui-circle-check icons font-3xl mt-4 goodanswer"></i>
+            Bravo !
         </span>
         <p>{{info}}</p>
     </div>
 </template>
 
-<style scoped>
-    .badanswer {
-        color: red;
+<style>
+    .goodanswer {
+        color: green;
     }
 
     .answertxt {
@@ -22,7 +22,7 @@
 
 <script>
   export default {
-    name: "QuizRate",
+    name: "QuizBravo",
     props: ['info']
   };
 </script>
