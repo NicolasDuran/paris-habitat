@@ -11,6 +11,30 @@ export default {
     },
     {
       title: true,
+      name: 'Pages',
+      class: '',
+      wrapper: {
+        element: '',
+        attributes: {}
+      }
+    },
+    {
+      name: 'Mes trophés',
+      url: '/trophy',
+      icon: 'icon-drop'
+    },
+    {
+      name: 'Quiz',
+      url: '/quiz',
+      icon: 'icon-drop'
+    },
+    {
+      name: 'Mes Data',
+      url: '/data',
+      icon: 'icon-pencil'
+    },
+    {
+      title: true,
       name: 'Theme',
       class: '',
       wrapper: {
@@ -256,18 +280,5 @@ export default {
         }
       ]
     },
-    {
-      name: 'Download CoreUI',
-      url: 'http://coreui.io/vue/',
-      icon: 'icon-cloud-download',
-      class: 'mt-auto',
-      variant: 'success'
-    },
-    {
-      name: 'Try CoreUI PRO',
-      url: 'http://coreui.io/pro/vue/',
-      icon: 'icon-layers',
-      variant: 'danger'
-    }
   ]
 }

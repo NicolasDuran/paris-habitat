@@ -7,6 +7,9 @@ const DefaultContainer = () => import('@/containers/DefaultContainer')
 // Views
 const Dashboard = () => import('@/views/Dashboard')
 
+// Views
+const Quiz = () => import('@/views/_nico/Quiz')
+
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
 
@@ -102,9 +105,9 @@ export default new Router({
           component: Charts
         },
         {
-          path: 'widgets',
-          name: 'Widgets',
-          component: Widgets
+          path: 'quiz',
+          name: 'Quiz',
+          component: Quiz
         },
         {
           path: 'users',
