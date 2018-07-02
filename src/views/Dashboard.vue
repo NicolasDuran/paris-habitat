@@ -2,77 +2,64 @@
   <div class="animated fadeIn">
     <b-row>
       <b-col sm="6" lg="3">
-        <b-card no-body class="bg-primary">
-          <b-card-body class="pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
-            <h4 class="mb-0">9.823</h4>
-            <p>Members online</p>
-          </b-card-body>
-          <card-line1-chart-example chartId="card-chart-01" class="chart-wrapper px-3" style="height:70px;" :height="70"/>
-        </b-card>
-      </b-col>
-      <b-col sm="6" lg="3">
-        <b-card no-body class="bg-info">
-          <b-card-body class="pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right no-caret>
-              <template slot="button-content">
-                <i class="icon-location-pin"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
-            <h4 class="mb-0">9.823</h4>
-            <p>Members online</p>
-          </b-card-body>
-          <card-line2-chart-example chartId="card-chart-02" class="chart-wrapper px-3" style="height:70px;" :height="70"/>
-        </b-card>
-      </b-col>
-      <b-col sm="6" lg="3">
-        <b-card no-body class="bg-warning">
-          <b-card-body class="pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
-            <h4 class="mb-0">9.823</h4>
-            <p>Members online</p>
-          </b-card-body>
-          <card-line3-chart-example chartId="card-chart-03" class="chart-wrapper" style="height:70px;" height="70"/>
-        </b-card>
-      </b-col>
-      <b-col sm="6" lg="3">
-        <b-card no-body class="bg-danger">
-          <b-card-body class="pb-0">
-            <b-dropdown class="float-right" variant="transparent p-0" right>
-              <template slot="button-content">
-                <i class="icon-settings"></i>
-              </template>
-              <b-dropdown-item>Action</b-dropdown-item>
-              <b-dropdown-item>Another action</b-dropdown-item>
-              <b-dropdown-item>Something else here...</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
-            <h4 class="mb-0">9.823</h4>
-            <p>Members online</p>
-          </b-card-body>
-          <card-bar-chart-example chartId="card-chart-04" class="chart-wrapper px-3" style="height:70px;" height="70"/>
-        </b-card>
-      </b-col>
+      <div class="card">
+          <div class="card-header">
+            <div class="row justify-content-between">
+              <div class="col-6">
+                Consommation d'eau
+              </div>
+            <div class="col-3 text-right">
+              <b-row>
+                75/100 (L) <i class="fa fa-tint ml-3"></i>
+              </b-row>
+            </div>
+          </div>
+        </div>
+        <div class="card-body container">
+          <div class="row justify-content-between">
+            <div class="col-4">
+              01/06
+            </div>
+            <div class="col-4 text-right">
+              30/06
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </b-col>
+     <b-col sm="6" lg="3">
+      <div class="card">
+          <div class="card-header">
+            <div class="row justify-content-between">
+              <div class="col-6">
+                Consommation d'électricité
+              </div>
+            <div class="col-4 text-right">
+              <b-row>
+                160/170 (kWh) <i class="fa fa-bolt ml-3"></i>
+              </b-row>
+            </div>
+          </div>
+        </div>
+        <div class="card-body container">
+          <div class="row justify-content-between">
+            <div class="col-4">
+              01/06
+            </div>
+            <div class="col-4 text-right">
+              30/06
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </b-col>
+
     </b-row>
 
     <b-card>
