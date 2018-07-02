@@ -1,25 +1,36 @@
 <script src="../router.js">
 </script>
 <template>
-    <q-page padding>
+    <b-card>
+        <div slot="header">
+            <strong>Super Quiz !</strong>
+        </div>
         <div v-if="state == 'q1'">
-            <p class="caption">Un bain consome...</p>
-            <q-option-group
-                    type="radio"
-                    v-model="answer"
-                    :options="[
-            { label: `2 fois plus d'eau qu'une douche`, value: 'good' },
-            { label: `4 fois plus d'eau qu'une douche`, value: 'bad1' },
-            { label: `40 fois plus d'eau qu'une douche`, value: 'bad2' }
-          ]"
-            />
+            <b-form-group
+                    label="Un bain consome..."
+                    label-for="basicRadios"
+                    :label-cols="3"
+                    :horizontal="true">
+                <b-form-radio-group id="basicRadios"
+                                    :plain="true"
+                                    :options="[
+            { text: `2 fois plus d'eau qu'une douche`, value: 'good' },
+            { text: `4 fois plus d'eau qu'une douche`, value: 'bad1' },
+            { text: `40 fois plus d'eau qu'une douche`, value: 'bad2' }
+              ]"
+                                    checked="2"
+                                    stacked>
+                </b-form-radio-group>
+            </b-form-group>
         </div>
         <div v-if="state == 'q1_g'">
-            <q-icon name="done_outline" class="goodanswer" /> <span class="answertxt">Bravo !</span>
+            <i class="cui-circle-check icons font-2xl d-block mt-4"></i>
+            <span class="answertxt">Bravo !</span>
             <p>Une douche équivault à beaucoup d'eau</p>
         </div>
         <div v-if="state == 'q1_b'">
-            <q-icon name="highlight_off" class="badanswer" /> <span class="answertxt">Raté !</span>
+            <i class="cui-circle-x icons font-2xl d-block mt-4"></i>
+            <span class="answertxt">Raté !</span>
             <p>Une douche équivault à beaucoup d'eau</p>
         </div>
 
@@ -67,9 +78,11 @@
         <div v-if="isLast">
             Score: {{score}} / 3
         </div>
-        <q-btn v-if="isQuestionPage" label="Valider" @click="checkQuiz()"/>
+        <b-button v-if="isQuestionPage" variant="primary" size="sm" class="btn" @click="checkQuiz()"><span>Valider</span></b-button>
+        <b-button variant="primary" size="sm" class="btn" @click="checkQuiz()"><span>Valider</span></b-button>
+        <q-btn v-if="isQuestionPage" label="Valider" />
         <q-btn v-if="isAnswerPage && !isLast" label="Question suivante" @click="nextQuestion()"/>
-    </q-page>
+    </b-card>
 </template>
 
 <style>

@@ -47,9 +47,9 @@
         <DefaultAside/>
       </AppAside>
     </div>
-    <TheFooter>
-      <!--footer-->
-    </TheFooter>
+    <!--<TheFooter>-->
+      <!--&lt;!&ndash;footer&ndash;&gt;-->
+    <!--</TheFooter>-->
   </div>
 </template>
 
