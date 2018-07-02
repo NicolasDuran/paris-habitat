@@ -35,25 +35,6 @@ export default {
     },
     {
       title: true,
-      name: 'Theme',
-      class: '',
-      wrapper: {
-        element: '',
-        attributes: {}
-      }
-    },
-    {
-      name: 'Colors',
-      url: '/theme/colors',
-      icon: 'icon-drop'
-    },
-    {
-      name: 'Typography',
-      url: '/theme/typography',
-      icon: 'icon-pencil'
-    },
-    {
-      title: true,
       name: 'Components',
       class: '',
       wrapper: {
