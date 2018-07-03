@@ -19,8 +19,8 @@
                 </b-card>
             </b-col>
             <b-col sm="3" md="3">
-                <b-card header="Maitre bougie">
-                    <trophy-elec></trophy-elec>
+                <b-card header="M. Jesaistout">
+                    <trophy-quiz></trophy-quiz>
                 </b-card>
             </b-col>
         </b-row>
@@ -45,6 +45,7 @@
 
 <script>
   import TrophyDoucheMaster from '../_nicoComp/TrophyDoucheMaster.vue'
+  import TrophyQuiz from '../_nicoComp/TrophyQuiz.vue'
   import TrophyDoucheKing from '../_nicoComp/TrophyDoucheKing.vue'
   import TrophyElec from '../_nicoComp/TrophyElec.vue'
 
@@ -53,7 +54,8 @@
     components: {
       TrophyDoucheMaster,
       TrophyDoucheKing,
-      TrophyElec
+      TrophyElec,
+      TrophyQuiz
     },
     data() {
       return {
