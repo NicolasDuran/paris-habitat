@@ -5,13 +5,13 @@
     <b-col sm="6" lg="3">
       <div class="brand-card">
           <div class="brand-card-header bg-facebook p-3">
-            <h4 class="text-white">Eau</h4>	
+            <h4 class="text-white">Eau</h4>
         </div>
                 <div class=" container">
         <div class="card-body container">
             <div class="row vdivide p-6">
                 <div class="col-sm-6 text-center">
-    
+
                   <div>
                       <div class="text-value text-success">3000L</div>
                       <div class="text-uppercase text-muted small text-success">Consommation estimé</div>
@@ -20,7 +20,7 @@
             <div class="col-sm-6 text-center">
                   <div>
                       <div class="text-value text-success">36€</div>
-                      <div class="text-uppercase text-muted small text-success">Facture estimé</div>	
+                      <div class="text-uppercase text-muted small text-success">Facture estimé</div>
                   </div>
              </div>
          </div>
@@ -50,7 +50,7 @@
     <b-col sm="6" lg="3">
       <div class="brand-card">
           <div class="brand-card-header bg-facebook p-3">
-            <h4 class="text-white">Électricité</h4>	
+            <h4 class="text-white">Électricité</h4>
         </div>
       <div class=" container">
         <div class="card-body container">
@@ -64,7 +64,7 @@
             <div class="col-sm-6 text-center">
                   <div>
                       <div class="text-value text-success">70€</div>
-                      <div class="text-uppercase text-muted small text-success">Facture estimé</div>	
+                      <div class="text-uppercase text-muted small text-success">Facture estimé</div>
                   </div>
              </div>
          </div>
@@ -489,7 +489,8 @@
       CardBarChartExample,
       MainChartExample,
       SocialBoxChartExample,
-      CalloutChartExample
+      CalloutChartExample,
+      //new
     },
     data: function () {
       return {

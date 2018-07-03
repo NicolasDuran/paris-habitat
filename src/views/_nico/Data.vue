@@ -1,142 +1,113 @@
 <script src="../router.js">
 </script>
 <template>
-    <q-page padding>
-        <div v-if="state == 'q1'">
-            <p class="caption">Un bain consome...</p>
-            <q-option-group
-                    type="radio"
-                    v-model="answer"
-                    :options="[
-            { label: `2 fois plus d'eau qu'une douche`, value: 'good' },
-            { label: `4 fois plus d'eau qu'une douche`, value: 'bad1' },
-            { label: `40 fois plus d'eau qu'une douche`, value: 'bad2' }
-          ]"
-            />
-        </div>
-        <div v-if="state == 'q1_g'">
-            <q-icon name="done_outline" class="goodanswer" /> <span class="answertxt">Bravo !</span>
-            <p>Une douche équivault à beaucoup d'eau</p>
-        </div>
-        <div v-if="state == 'q1_b'">
-            <q-icon name="highlight_off" class="badanswer" /> <span class="answertxt">Raté !</span>
-            <p>Une douche équivault à beaucoup d'eau</p>
-        </div>
+    <b-card>
+        <b-row>
+            <b-col sm="5">
+                <b-button-toolbar class="float-left" aria-label="Toolbar with buttons group">
+                    <b-form-radio-group class="mr-3" id="radiosBtn" buttons button-variant="outline-secondary" v-model="energyTypeChart" name="radiosBtn">
+                        <b-form-radio class="mx-0" value="eau">Eau</b-form-radio>
+                        <b-form-radio class="mx-0" value="elec">Electricité</b-form-radio>
+                    </b-form-radio-group>
+                </b-button-toolbar>
+            </b-col>
+            <b-col sm="7" class="d-none d-md-block">
+                <b-button-toolbar class="float-right" aria-label="Toolbar with buttons group">
+                    <b-form-radio-group class="mr-3" id="radiosBtn" buttons button-variant="outline-secondary" v-model="selected" name="radiosBtn">
+                        <b-form-radio class="mx-0" value="Day">Jour</b-form-radio>
+                        <b-form-radio class="mx-0" value="Week">Mois</b-form-radio>
+                        <b-form-radio class="mx-0" value="Month">Mois</b-form-radio>
+                        <b-form-radio class="mx-0" value="Year">Année</b-form-radio>
+                    </b-form-radio-group>
+                </b-button-toolbar>
+            </b-col>
+        </b-row>
+        <day-elec-chart v-if="selected=='Day' && energyTypeChart=='elec'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></day-elec-chart>
+        <week-elec-chart v-if="selected=='Week' && energyTypeChart=='elec'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></week-elec-chart>
+        <month-elec-chart v-if="selected=='Month' && energyTypeChart=='elec'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></month-elec-chart>
+        <year-elec-chart v-if="selected=='Year' && energyTypeChart=='elec'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></year-elec-chart>
 
-        <div v-if="state == 'q2'">
-            <p class="caption">Eteindre les lumières c'est </p>
-            <q-option-group
-                    type="radio"
-                    v-model="answer"
-                    :options="[
-            { label: 'Bien', value: 'good' },
-            { label: 'Pas Bien', value: 'bad1' },
-            { label: 'Plutôt con', value: 'bad2' }
-          ]"
-            />
-        </div>
-        <div v-if="state == 'q2_g'">
-            <q-icon name="done_outline" class="goodanswer" /> <span class="answertxt">Bravo !</span>
-            <p>Il faut toujours éteindre les lumières !</p>
-        </div>
-        <div v-if="state == 'q2_b'">
-            <q-icon name="highlight_off" class="badanswer" /> <span class="answertxt">Raté !</span>
-            <p>Il faut toujours éteindre les lumières !</p>
-        </div>
+        <day-water-chart v-if="selected=='Day' && energyTypeChart=='eau'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></day-water-chart>
+        <week-water-chart v-if="selected=='Week' && energyTypeChart=='eau'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></week-water-chart>
+        <month-water-chart v-if="selected=='Month' && energyTypeChart=='eau'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></month-water-chart>
+        <year-water-chart v-if="selected=='Year' && energyTypeChart=='eau'" chartId="main-chart-01" class="chart-wrapper" style="height:300px;margin-top:40px;" height="300"></year-water-chart>
 
-        <div v-if="state == 'q3'">
-            <p class="caption">Fermer le robinet quand on se brosse les dents</p>
-            <q-option-group
-                    type="radio"
-                    v-model="answer"
-                    :options="[
-            { label: 'Toujours', value: 'good' },
-            { label: 'Souvent', value: 'bad1' },
-            { label: 'Jamais', value: 'bad2' }
-          ]"
-            />
+        <div slot="footer">
+            <b-row class="text-center" v-if="energyTypeChart=='elec'">
+                <b-col class="mb-sm-2 mb-0">
+                    <div class="text-muted">Chauffage</div>
+                    <strong>44 kWh Users (44%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" variant="danger" :value="44"></b-progress>
+                </b-col>
+                <b-col class="mb-sm-2 mb-0 d-md-down-none">
+                    <div class="text-muted">Refroidissement</div>
+                    <strong>18 kWh (18%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" variant="warning" :value="18"></b-progress>
+                </b-col>
+                <b-col class="mb-sm-2 mb-0">
+                    <div class="text-muted">Eau chaude sanitaire</div>
+                    <strong>10 kWh (10%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" variant="success" :value="10"></b-progress>
+                </b-col>
+                <b-col class="mb-sm-2 mb-0">
+                    <div class="text-muted">Prises electriques</div>
+                    <strong>12 kWh (12%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" variant="success" :value="12"></b-progress>
+                </b-col>
+                <b-col class="mb-sm-2 mb-0 d-md-down-none">
+                    <div class="text-muted">Autre</div>
+                    <strong>14 kWh (14%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" :value="14"></b-progress>
+                </b-col>
+            </b-row>
+            <b-row class="text-center" v-if="energyTypeChart=='eau'">
+                <b-col class="mb-sm-2 mb-0">
+                    <div class="text-muted">Eau froide</div>
+                    <strong>74 kWh Users (74%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" variant="success" :value="74"></b-progress>
+                </b-col>
+                <b-col class="mb-sm-2 mb-0 d-md-down-none">
+                    <div class="text-muted">Eau chaude</div>
+                    <strong>26 kWh (26%)</strong>
+                    <b-progress height={} class="progress-xs mt-2" :precision="1" variant="info" :value="26"></b-progress>
+                </b-col>
+            </b-row>
         </div>
-        <div v-if="state == 'q3_g'">
-            <q-icon name="done_outline" class="goodanswer" /> <span class="answertxt">Bravo !</span>
-            <p>Fermer le robinet pendant qu'on se brosse les dents, c'est 22 litres d'eau potable économisés</p>
-        </div>
-        <div v-if="state == 'q3_b'">
-            <q-icon name="highlight_off" class="badanswer" /> <span class="answertxt">Raté !</span>
-            <p>Fermer le robinet pendant qu'on se brosse les dents, c'est 22 litres d'eau potable économisés</p>
-        </div>
-        <div v-if="isLast">
-            Score: {{score}} / 3
-        </div>
-        <q-btn v-if="isQuestionPage" label="Valider" @click="checkQuiz()"/>
-        <q-btn v-if="isAnswerPage && !isLast" label="Question suivante" @click="nextQuestion()"/>
-    </q-page>
+    </b-card>
 </template>
 
 <style>
-    .goodanswer {
-        font-size: 60px;
-        color: green;
-    }
 
-    .answertxt {
-        font-size: 50px;
-    }
-
-    .badanswer {
-        font-size: 60px;
-        color: red;
-    }
 </style>
 
 <script>
+  import DayElecChart from './DayElecChart.vue'
+  import WeekElecChart from './WeekElecChart.vue'
+  import MonthElecChart from './MonthElecChart.vue'
+  import YearElecChart from './YearElecChart.vue'
+
+  import DayWaterChart from './DayWaterChart.vue'
+  import WeekWaterChart from './WeekWaterChart.vue'
+  import MonthWaterChart from './MonthWaterChart.vue'
+  import YearWaterChart from './YearWaterChart.vue'
+
   export default {
     name: "PageQuiz",
+    components: {
+      DayElecChart,
+      WeekElecChart,
+      MonthElecChart,
+      YearElecChart,
+      DayWaterChart,
+      WeekWaterChart,
+      MonthWaterChart,
+      YearWaterChart
+    },
     data() {
       return {
-        state: "q1",
-        answer: null,
-        score: 0
+        energyTypeChart: 'elec',
+        selected: 'Month'
       };
     },
-    computed: {
-      isAnswerPage() {
-        return this.state.includes("_");
-      },
-      isQuestionPage() {
-        return !this.isAnswerPage;
-      },
-      isLast() {
-        return this.state === "q3_g" || this.state === "q3_b";
-      }
-    },
-    methods: {
-      checkQuiz() {
-        if (this.state === "q1") {
-          if (this.answer === "good") {
-            this.state = "q1_g";
-            this.score++;
-          } else this.state = "q1_b";
-        }
-        if (this.state === "q2") {
-          if (this.answer === "good") {
-            this.state = "q2_g";
-            this.score++;
-          } else this.state = "q2_b";
-        }
-        if (this.state === "q3") {
-          if (this.answer === "good") {
-            this.state = "q3_g";
-            this.score++;
-          } else this.state = "q3_b";
-        }
-      },
-      nextQuestion() {
-        if (this.state.startsWith("q1")) {
-          this.state = "q2";
-        } else if (this.state.startsWith("q2")) {
-          this.state = "q3";
-        }
-      }
-    }
   };
 </script>
