@@ -1,7 +1,7 @@
 <script src="../router.js">
 </script>
 <template>
-    <div>
+    <div class="box">
         <span class="answertxt">
             <i class="cui-circle-check icons font-3xl mt-4 goodanswer"></i>
             Bravo !
@@ -10,7 +10,11 @@
     </div>
 </template>
 
-<style>
+<style scoped>
+    .box {
+        padding-top: 40px;
+    }
+
     .goodanswer {
         color: green;
     }

@@ -1,7 +1,7 @@
 <script src="../router.js">
 </script>
 <template>
-    <div>
+    <div class="box">
         <span class="answertxt">
             <i class="cui-circle-x icons font-3xl mt-4 badanswer"></i>
             Raté !
@@ -11,6 +11,10 @@
 </template>
 
 <style scoped>
+    .box {
+        padding-top: 40px;
+    }
+
     .badanswer {
         color: red;
     }
