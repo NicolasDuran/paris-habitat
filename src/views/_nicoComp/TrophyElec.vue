@@ -33,6 +33,19 @@
 <script>
   export default {
     name: "TrophyWidget",
-    props: ['tittle', 'desc']
+    props: ['tittle', 'desc'],
+      data() {
+          return {
+              src: '/img/parking/pk_0.png',
+              cpt : 0,
+          };
+      },
+      computed: {
+      },
+      methods: {
+          incr() {
+              this.src = '/img/parking/pk_' + this.cpt++ +'.png';
+          },
+      }
   };
 </script>

@@ -38,5 +38,10 @@ export default {
       url: '/data',
       icon: 'icon-chart'
     },
+    {
+      name: 'Ma foret',
+      url: '/forest',
+      icon: 'icon-chart'
+    },
   ]
 }

@@ -11,6 +11,7 @@ const Dashboard = () => import('@/views/Dashboard')
 const Quiz = () => import('@/views/_nico/Quiz')
 const Data = () => import('@/views/_nico/Data')
 const Trophy = () => import('@/views/_nico/Trophy')
+const Forest = () => import('@/views/_nico/Forest')
 
 const Colors = () => import('@/views/theme/Colors')
 const Typography = () => import('@/views/theme/Typography')
@@ -120,6 +121,11 @@ export default new Router({
           path: 'data',
           name: 'Data',
           component: Data
+        },
+        {
+          path: 'forest',
+          name: 'Forest',
+          component: Forest
         },
         {
           path: 'users',
