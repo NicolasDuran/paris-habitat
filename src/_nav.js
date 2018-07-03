@@ -24,7 +24,7 @@ export default {
       }
     },
     {
-      name: 'Mes trophés',
+      name: 'Mes trophées',
       url: '/trophy',
       icon: 'icon-badge'
     },

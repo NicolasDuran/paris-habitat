@@ -2,95 +2,158 @@
     <div class="animated fadeIn">
         <b-row>
 
-            <b-col sm="6" lg="5">
-                <div class="brand-card">
-                    <div class="brand-card-header bg-facebook p-3">
-                        <h4 class="text-white">Eau</h4>
-                    </div>
-                    <div class=" container">
-                        <div class="card-body container">
-                            <div class="row vdivide p-6">
-                                <div class="col-sm-6 text-center">
+    <b-col>
+      <div class="brand-card">
+          <div class="brand-card-header bg-facebook p-3">
+          <div class="row justify-content-between">
+            <h1 class="text-white"><i class="fa fa-tint m-2"></i>Eau</h1>
+	    </div>
+        </div>
+                <div class=" container">
+        <div class="card-body container">
+            <div class="row vdivide p-6">
+                <div class="col-sm-6 text-center">
 
-                                    <div>
-                                        <div class="text-value text-success">3000L</div>
-                                        <div class="text-uppercase text-muted small text-success">Consommation estimé</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 text-center">
-                                    <div>
-                                        <div class="text-value text-success">36€</div>
-                                        <div class="text-uppercase text-muted small text-success">Facture estimé</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div class="row justify-content-between">
-                            <div class="col-8">
-                                <i class="fa fa-exclamation-triangle" style="font-size:20px;"></i> Vous consommez plus que la moyenne !
-                            </div>
-                            <div class="col-3 text-right">
-                                <h3 class="font-weight-bold text-danger">5%</h3>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div class="row justify-content-between">
-                            <div class="col-8">
-                                Vous auriez pu economiser
-                            </div>
-                            <div class="col-2 text-right">
-                                <h3 class="font-weight-bold text-success">5€</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </b-col>
+                  <div>
+                      <div class="text-value" style="font-size:40px;"><i class="fa fa-arrow-up mr-1"></i>3000L</div>
+                      <div class="text-uppercase small">Consommation estimée</div>
+                  </div>
+    	       </div>
+            <div class="col-sm-6 text-center text-danger">
+                  <div>
+                      <div class="text-value" style="font-size:40px;"><i class="fa fa-arrow-up mr-1"></i>36€</div>
+                      <div class="text-uppercase small">Facture estimée</div>
+                  </div>
+             </div>
+         </div>
+       </div>
+       <hr/>
+          <div class="row justify-content-between text-danger">
+            <div class="col-8"  style="font-size:20px;">
+              <i class="fa fa-exclamation-triangle"></i> Vous consommez plus que la moyenne !
+            </div>
+            <div class="col-3 text-right">
+	    	<h3 class="font-weight-bold">14%</h3>
+            </div>
+          </div>
+          <div class="row justify-content-between  text-success"  style="font-size:20px;">
+            <div class="col-8">
+                Vous auriez pu economiser
+            </div>
+            <div class="col-2 text-right">
+	    	<h3 class="font-weight-bold">10€</h3>
+            </div>
+          </div>
+        </div>
 
 
-            <b-col sm="6" lg="5">
-                <div class="brand-card">
-                    <div class="brand-card-header bg-facebook p-3">
-                        <h4 class="text-white">Électricité</h4>
-                    </div>
-                    <div class=" container">
-                        <div class="card-body container">
-                            <div class="row vdivide p-6">
-                                <div class="col-sm-6 text-center">
-                                    <div>
-                                        <div class="text-value text-success">170 kWh</div>
-                                        <div class="text-uppercase text-muted small text-success">Consommation estimé</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 text-center">
-                                    <div>
-                                        <div class="text-value text-success">70€</div>
-                                        <div class="text-uppercase text-muted small text-success">Facture estimé</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr/>
-                        <div class="row justify-content-between">
-                            <div class="col-9">
-                                <i class="fa fa-exclamation-triangle" style="font-size:20px;" ></i> Vous consommez plus que la moyenne !
-                            </div>
-                            <div class="col-3 text-right">
-                                <h3 class="font-weight-bold text-danger">7%</h3>
-                            </div>
-                        </div>
-                        <div class="row justify-content-between">
-                            <div class="col-8">
-                                Vous auriez pu economiser
-                            </div>
-                            <div class="col-2 text-right">
-                                <h3 class="font-weight-bold text-success">4€</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </b-col>
-        </b-row>
+	<div class="container">
+       <hr/>
+	  <div class="row">
+	    <div class="col">
+	    <div class="card bg-info">
+		  <div class="card-body">
+		    <h5 class="card-title">Robinet</h5>
+		    <p class="card-text">Pensez à fermer le robinet quand vous vous voulez les dents</p>
+		  </div>
+		</div>
+	    </div>
+	    <div class="col">
+	    <div class="card bg-info">
+		  <div class="card-body">
+		    <h5 class="card-title">Toilettes</h5>
+		    <p class="card-text">Equipez vos toilettes d'une chasse d'eau à double commande</p>
+		  </div>
+		</div>
+	    </div>
+	    <div class="col">
+	    <div class="card bg-info">
+		  <div class="card-body">
+		    <h5 class="card-title">Lave linge</h5>
+		    <p class="card-text">Attendez que le lave linge soit rempli avant de faire une lessive. Utilisez le mode éco </p>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </b-col>
+
+
+    <b-col>
+      <div class="brand-card">
+          <div class="brand-card-header bg-facebook p-3">
+            <h1 class="text-white"><i class="fa fa-bolt ml-2"></i>Électricité</h1>
+        </div>
+      <div class="container">
+        <div class="card-body container">
+            <div class="row vdivide p-6">
+                <div class="col-sm-6 text-center">
+                  <div>
+                      <div class="text-value " style="font-size:40px;"><i class="fa fa-arrow-up mr-1"></i>170 kWh</div>
+                      <div class="text-uppercase small">Consommation estimée</div>
+                  </div>
+    	       </div>
+            <div class="col-sm-6 text-center text-danger">
+                  <div>
+                   <div class="text-value" style="font-size:40px;"><i class="fa fa-arrow-up mr-1"> </i>70€</div>
+                      <div class="text-uppercase small">Facture estimée</div>
+                  </div>
+             </div>
+         </div>
+       </div>
+       <hr/>
+          <div class="row justify-content-between text-danger">
+            <div class="col-9" style="font-size:20px;">
+              <i class="fa fa-exclamation-triangle" style="font-size:20px;" ></i> Vous consommez plus que la moyenne !
+            </div>
+            <div class="col-3 text-right">
+	    	<h3 class="font-weight-bold">10%</h3>
+            </div>
+          </div>
+          <div class="row justify-content-between text-success">
+            <div class="col-8" style="font-size:20px;">
+                Vous auriez pu economiser
+            </div>
+            <div class="col-2 text-right">
+	    	<h3 class="font-weight-bold text-success">6€</h3>
+            </div>
+          </div>
+        </div>
+	<div class="container">
+       <hr/>
+	  <div class="row">
+	    <div class="col">
+	    <div class="card bg-info">
+		  <div class="card-body">
+		    <h5 class="card-title">Réfrigérateur</h5>
+		    <p class="card-text">Lorsque vous préparez le repas, sortez du réfrigérateur tout ce qu’il vous faut avant de commencer, vous éviterez la déperdition d’air froid.</p>
+		  </div>
+		</div>
+	    </div>
+	    <div class="col">
+	    <div class="card bg-info">
+		  <div class="card-body">
+		    <h5 class="card-title">Ampoules</h5>
+		    <p class="card-text">Remplacez vos ampoules traditionnelles par des ampoules à économie d’énergie (ampoules basse consommation, ampoules LED) qui durent trois fois plus et consomment trois fois moins.</p>
+		  </div>
+		</div>
+	    </div>
+	    <div class="col">
+	    <div class="card bg-info">
+		  <div class="card-body">
+		    <h5 class="card-title">Cuisine</h5>
+		    <p class="card-text">Faites bouillir de l’eau dans une casserole couverte demande 4 fois moins d’énergie</p>
+		  </div>
+		</div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </b-col>
+    </b-row>
+
+
 
     </div>
 </template>
