@@ -1,66 +1,96 @@
 <template>
   <div class="animated fadeIn">
     <b-row>
-      <b-col sm="6" lg="3">
-      <div class="card">
-          <div class="card-header">
-            <div class="row justify-content-between">
-              <div class="col-6">
-                Consommation d'eau
-              </div>
+
+    <b-col sm="6" lg="3">
+      <div class="brand-card">
+          <div class="brand-card-header bg-facebook p-3">
+            <h4 class="text-white">Eau</h4>	
+        </div>
+                <div class=" container">
+        <div class="card-body container">
+            <div class="row vdivide p-6">
+                <div class="col-sm-6 text-center">
+    
+                  <div>
+                      <div class="text-value text-success">3000L</div>
+                      <div class="text-uppercase text-muted small text-success">Consommation estimé</div>
+                  </div>
+    	       </div>
+            <div class="col-sm-6 text-center">
+                  <div>
+                      <div class="text-value text-success">36€</div>
+                      <div class="text-uppercase text-muted small text-success">Facture estimé</div>	
+                  </div>
+             </div>
+         </div>
+       </div>
+       <hr/>
+          <div class="row justify-content-between">
+            <div class="col-8">
+              <i class="fa fa-exclamation-triangle" style="font-size:20px;"></i> Vous consommez plus que la moyenne !
+            </div>
             <div class="col-3 text-right">
-              <b-row>
-                75/100 (L) <i class="fa fa-tint ml-3"></i>
-              </b-row>
+	    	<h3 class="font-weight-bold text-danger">5%</h3>
             </div>
           </div>
-        </div>
-        <div class="card-body container">
           <div class="row justify-content-between">
-            <div class="col-4">
-              01/06
+            <div class="col-8">
+                Vous auriez pu economiser
             </div>
-            <div class="col-4 text-right">
-              30/06
+            <div class="col-2 text-right">
+	    	<h3 class="font-weight-bold text-success">5€</h3>
             </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div>
-      </div>
-    </b-col>
-     <b-col sm="6" lg="3">
-      <div class="card">
-          <div class="card-header">
-            <div class="row justify-content-between">
-              <div class="col-6">
-                Consommation d'électricité
-              </div>
-            <div class="col-4 text-right">
-              <b-row>
-                160/170 (kWh) <i class="fa fa-bolt ml-3"></i>
-              </b-row>
-            </div>
-          </div>
-        </div>
-        <div class="card-body container">
-          <div class="row justify-content-between">
-            <div class="col-4">
-              01/06
-            </div>
-            <div class="col-4 text-right">
-              30/06
-            </div>
-          </div>
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
       </div>
     </b-col>
 
+
+    <b-col sm="6" lg="3">
+      <div class="brand-card">
+          <div class="brand-card-header bg-facebook p-3">
+            <h4 class="text-white">Électricité</h4>	
+        </div>
+      <div class=" container">
+        <div class="card-body container">
+            <div class="row vdivide p-6">
+                <div class="col-sm-6 text-center">
+                  <div>
+                      <div class="text-value text-success">170 kWh</div>
+                      <div class="text-uppercase text-muted small text-success">Consommation estimé</div>
+                  </div>
+    	       </div>
+            <div class="col-sm-6 text-center">
+                  <div>
+                      <div class="text-value text-success">70€</div>
+                      <div class="text-uppercase text-muted small text-success">Facture estimé</div>	
+                  </div>
+             </div>
+         </div>
+       </div>
+       <hr/>
+          <div class="row justify-content-between">
+            <div class="col-9">
+              <i class="fa fa-exclamation-triangle" style="font-size:20px;" ></i> Vous consommez plus que la moyenne !
+            </div>
+            <div class="col-3 text-right">
+	    	<h3 class="font-weight-bold text-danger">7%</h3>
+            </div>
+          </div>
+          <div class="row justify-content-between">
+            <div class="col-8">
+                Vous auriez pu economiser
+            </div>
+            <div class="col-2 text-right">
+	    	<h3 class="font-weight-bold text-success">4€</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </b-col>
     </b-row>
+
 
 
         <b-card>
@@ -566,4 +596,19 @@
     #card-chart-01, #card-chart-02 {
         width: 100% !important;
     }
+
+	.row.vdivide [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 10px;
+  right: 0;
+  min-height: 70px;
+  margin-bottom: 20px
+}
+
+
 </style>
