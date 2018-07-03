@@ -2,7 +2,7 @@
 </script>
 <template>
     <div class="trophybox">
-        <i class="fa fa-tachometer fa-lg mt-4 bigicon"></i>
+        <i style="color: #ffd200" class="fa fa-tachometer fa-lg mt-4 bigicon"></i>
         <div class="label">
             Pro de la douche
             <p class="desc">Prendre une douche en moins de 4 minutes</p>

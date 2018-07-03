@@ -2,7 +2,7 @@
 </script>
 <template>
     <div class="trophybox">
-        <i class="icon-badge bigicon"></i>
+        <i style="color: #ff0000" class="icon-badge bigicon"></i>
         <div class="label">
             M. Jesaistout
             <p class="desc">Réussir le quiz !</p>

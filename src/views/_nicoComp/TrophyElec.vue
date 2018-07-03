@@ -2,7 +2,7 @@
 </script>
 <template>
     <div class="trophybox">
-        <i class="icon-energy bigicon"></i>
+        <i style="color: #ffd200" class="icon-energy bigicon"></i>
         <div class="label">
             Expert bougie
             <p class="desc">Consommer le moins d'electricité du batiment</p>
